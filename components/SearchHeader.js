@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import search from '../pages/search'
 import { MicrophoneIcon, SearchIcon, XIcon } from '@heroicons/react/solid'
 import User from './User'
+import SearchHeaderOptions from './SearchHeaderOptions'
 
 
 export default function SearchHeader() {
@@ -15,7 +16,7 @@ export default function SearchHeader() {
         event.preventDefault();
         const term = searchInputRef.current.value
         if (!term.trim()) return
-        router.push(`/search?term=${term.trim()}`)
+        router.push(`/search?term=${term.trim()}&searchType=`)
     }
 
 
@@ -49,7 +50,7 @@ export default function SearchHeader() {
 
                 <User className="ml-auto whitespace-nowrap" />
             </div>
-
+            <SearchHeaderOptions />
         </header>
     )
 }

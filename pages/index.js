@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from "next/image"
 import Header from '../components/Header'
 import { SearchIcon, MicrophoneIcon } from "@heroicons/react/solid"
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <Header />
       {/* Body */}
 
-      <form className='flex flex-col items-center mt-4'>
+      <form className='flex flex-col items-center mt-20'>
         <Image width="300" height="100" objectFit='cover'
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/640px-Google_2015_logo.svg.png"
           alt="google logo" />
@@ -31,7 +32,7 @@ export default function Home() {
         </div>
       </form>
       {/* Footer */}
-
+      <Footer />
     </div>
   )
 }

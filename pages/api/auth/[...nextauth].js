@@ -10,6 +10,7 @@ export default NextAuth({
         }),
 
     ],
+    seceret: process.env.SECRET,
     pages: {
         signIn: "/auth/signin"
     }
